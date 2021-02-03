@@ -12,10 +12,10 @@ function Login(props) {
       if (firebase.getCurrent()) {
          firebase.getUserName((info) => {
             localStorage.nome = info.val().nome;
-            return props.history.replace("/dashboard");
+            props.history.replace("/dashboard");
          });
       }
-   });
+   }, [props.history]);
 
    function entrar(e) {
       e.preventDefault();

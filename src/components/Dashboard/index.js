@@ -6,11 +6,10 @@ import "./dashboard.css";
 function Dashboard(props) {
    const [nome, setNome] = useState(localStorage.nome);
    const [email, setEmail] = useState(localStorage.email);
-  
 
    useEffect(() => {
-      console.log('Como está o usuario: ', localStorage.nome);
-      if(localStorage.nome===''){
+      console.log("Como está o usuario: ", localStorage.nome);
+      if (localStorage.nome === "") {
          localStorage.nome = "";
          localStorage.email = "";
          setNome("");
@@ -31,7 +30,6 @@ function Dashboard(props) {
       }
    }, [props.history]);
 
-   
    async function logout() {
       await firebase
          .logout()
@@ -49,7 +47,6 @@ function Dashboard(props) {
       <div id="dashboard">
          <div className="user-info">
             <h1>Olá {nome}!!!</h1>
-
          </div>
          <p>Saudações!!!</p>
 

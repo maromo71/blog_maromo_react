@@ -6,8 +6,8 @@ function Home() {
    const [posts, setPosts] = useState([]);
 
    useEffect(() => {
-      // Runs after the first render() lifecycle
-      //atualizar os posts
+      //Carrega os posts...
+      console.log("carregando posts....");
       firebase.app.ref("posts").once("value", (snapshot) => {
          let dados = [];
          snapshot.forEach((childItem) => {
@@ -22,7 +22,7 @@ function Home() {
          dados.reverse();
          setPosts(dados);
       });
-   }, [posts]);
+   }, []);
 
    return (
       <section id="post">
