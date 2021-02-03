@@ -1,0 +1,13 @@
+Requisitos a serem instalados
+=============================
+react-router-dom 
+--save   firebase
+
+=============================
+Estrutura de Arquivos e Pastas:
+
+
+
+
+=============================
+
